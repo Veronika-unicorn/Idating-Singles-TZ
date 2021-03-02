@@ -20,11 +20,11 @@ body {
   min-width: 320px;
   height: 100vh;
   margin: 0 auto;
-  font-weight: 300;
-  font-size: $f-size;
+  font-weight: 400;
+  font-size: $f-size-base;
   line-height: 1.5;
   font-family: $f-family-base;
-  color: $f-color;
+  color: $color-text-base;
 }
 
 ul,

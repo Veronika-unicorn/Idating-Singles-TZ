@@ -1,14 +1,16 @@
 // COLOR
-$f-color: #454858;
-$f-color-secondary: #4d4d4d;
-$active-color: #4ac983;
-$focus-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+$color-text-base: #2f2f2f;
+$color-text-alpha: #19a68b;
+$color-text-beta: #4274a4;
+$color-action: #aff64f;
+$color-focus: rgba(0, 123, 255, 0.8);
+
+$focus-shadow: 0 0 0 2px $color-focus;
 
 // FONT
-$f-family-base: "Ebrima", sans-serif;
-$f-weight-heading: 700;
-$f-size: 16px;
-$f-size-heading: 1.5em;
+$f-family-base: "Roboto", sans-serif;
+$f-size-base: 16px;
+$f-size-heading: 1.25em;
 
 // MEDIA
 // min
