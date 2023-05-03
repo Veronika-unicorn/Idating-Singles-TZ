@@ -2,12 +2,8 @@
   "name": "starter-kit",
   "version": "1.0.0",
   "description": "Front-end starter-kit.",
-  "author": "Shapoval Ruslan",
+  "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rshapoval/starter-kit"
-  },
   "scripts": {
     "test": "npm run test:style && npm run test:js",
     "test-fix": "npm run test:style-fix && npm run test:js-fix",
