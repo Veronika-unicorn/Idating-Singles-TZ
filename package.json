@@ -52,5 +52,8 @@
     "> 1%",
     "last 2 versions",
     "IE 10"
-  ]
+  ],
+  "dependencies": {
+    "tiny-slider": "^2.9.4"
+  }
 }

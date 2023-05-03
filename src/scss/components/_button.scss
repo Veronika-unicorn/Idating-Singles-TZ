@@ -1,3 +1,26 @@
-/*--------------------
-  BUTTON
---------------------*/
+.button {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 53px;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.button-pink {
+  color: #FFFFFF;
+  background: #E5218F;
+  border: none;
+}
+
+.button-border {
+  color: #E5218F;
+  background: #F2FFDC;
+  border: 2px solid #E5218F;
+}

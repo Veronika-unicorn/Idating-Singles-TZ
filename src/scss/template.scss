@@ -1,24 +1,85 @@
-// PROJECT INFORMATION
-// 	- Document: ___ Theme
-// 	- Version:  ___
-// 	- Author:   R. Shapoval
-
-// HELPERS
-// Variables and mixins
 @import "helpers/_variables";
-@import "helpers/_mixins";
-
-// BASE
-// Base styles
-@import "base/_fonts";
 @import "base/_common";
-
-// COMPONENTS
-// Specific modules like a slider, a loader, a widget
 @import "components/_button";
-
-// LAYOUT
-// Main sections of the layout (header, footer, and so on)
 @import "layout/_header";
-@import "layout/_main-menu";
 @import "layout/_footer";
+@import "pages/all-chats";
+@import "pages/all-profiles";
+@import "pages/chat";
+@import "pages/profile";
+@import "pages/registration";
+@import "pages/welcome";
+
+.welcome-page,
+.registration-page,
+.profiles-page,
+.profile-page,
+.chat-page,
+.chats-page,
+.modal {
+  display: none;
+}
+
+.welcome {
+  header,
+  footer {
+    display: none;
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  .welcome-page {
+    display: block;
+  }
+}
+
+.registration {
+  .registration-page {
+    display: block;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__logo {
+    margin: 0 auto;
+  }
+}
+
+.profiles {
+  .profiles-page {
+    display: block;
+  }
+
+  .header__button__back {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.profile {
+  .profile-page {
+    display: block;
+  }
+}
+
+.chat {
+  .chat-page {
+    display: block;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+.show-modal {
+  overflow: hidden;
+
+  .modal {
+    display: flex;
+  }
+}

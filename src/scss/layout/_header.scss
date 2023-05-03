@@ -1,3 +1,33 @@
-/*--------------------
-  HEADER
---------------------*/
+.header {
+  z-index: 20;
+  width: 100%;
+  height: 80px;
+  background: #474A54;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #F2FFDC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+}

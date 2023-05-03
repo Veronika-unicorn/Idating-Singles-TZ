@@ -1,0 +1,99 @@
+    <div class="registration-page">
+      <div class="container">
+        <div class="registration__wrapper">
+          <h1 class="registration__title">
+            Create profile
+          </h1>
+          <form class="registration__form">
+            <div class="registration__form-wrapper">
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="full-name">
+                  Full name
+                </label>
+                <input class="field registration__form-input" id="full-name" type="text" placeholder="Full name" name="full-name">
+              </div>
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="name">
+                  Your name
+                </label>
+                <input class="field registration__form-input" id="name" type="text" placeholder="Name" name="name">
+              </div>
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="country">
+                  Your country
+                </label>
+                <input class="field registration__form-input" id="country" type="text" placeholder="Country" name="country">
+              </div>
+              <div class="registration__form-switch">
+                <span class="field-title registration__form-switch__title">
+                  Your gender
+                </span>
+                <div class="field registration__form-switch__wrapper">
+                  <input class="registration__form-switch__input" type="radio" id="male" name="switch" value="male" checked/>
+                  <label class="registration__form-switch__label" for="male">
+                    Male
+                  </label>
+                  <input class="registration__form-switch__input" type="radio" id="female" name="switch" value="female" />
+                  <label class="registration__form-switch__label" for="female">
+                    Female
+                  </label>
+                </div>
+              </div>
+
+              <div class="registration__form-checkboxes">
+                <span class="field-title registration__form-checkboxes__title">
+                  Your hobbies
+                </span>
+                <div class="registration__form-checkboxes__wrapper">
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="music" name="music" value="music" checked/>
+                    <label class="registration__form-checkboxes__label" for="music">
+                      Music
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="sports" name="sports" value="sports" />
+                    <label class="registration__form-checkboxes__label" for="sports">
+                      Sports
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="travel" name="travel" value="travel" checked/>
+                    <label class="registration__form-checkboxes__label" for="travel">
+                      Travel
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="movies" name="movies" value="movies" />
+                    <label class="registration__form-checkboxes__label" for="movies">
+                      Movies
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="registration__form-distance">
+                <h2 class="registration__title">
+                  Search distance
+                </h2>
+
+                <div class="registration__form-slider">
+                  <div class="registration__form-slider__distance">
+                    <span>0m</span>
+                    <span>1000m</span>
+                  </div>
+                  <div class="registration__form-range">
+                    <div class="registration__form-range__pointer"></div>
+                    <input class="registration__form-range__slider" id="range" type="range" min="0" max="1000" value="0"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <button type="submit" class="button button-pink registration__form-button" >
+              Create profile
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>

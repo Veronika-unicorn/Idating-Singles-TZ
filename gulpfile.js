@@ -24,7 +24,7 @@ gulp.task('del', () => {
   return del([
     './build/**/*',
     '!./build/readme.md'
-  ])
+  ]);
 });
 
 gulp.task('markup', (cb) => {
@@ -66,7 +66,7 @@ gulp.task('replace-url', (cb) => {
     .pipe(replace('../../fonts/', `${basePath}/fonts/`))
     .pipe(replace('../../img/', `${basePath}/img/`))
     .pipe(gulp.dest(['./build/css/']));
-    cb();
+  cb();
 });
 
 gulp.task('styles-min', () => {
@@ -80,7 +80,7 @@ gulp.task('styles-min', () => {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('scripts', () => {
@@ -100,7 +100,7 @@ gulp.task('scripts-min', () => {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('img-min', () => {
@@ -157,12 +157,12 @@ gulp.task('watch', () => {
     startPath: 'build/html/index.html'
   });
 
-  gulp.watch('./src/html/**/*',  gulp.series('markup'))
-    
-  gulp.watch('./src/scss/**/*.scss', gulp.series('styles', 'styles-min', 'replace-url'))
-  
-  gulp.watch('./src/js/**/*.js', gulp.series('scripts', 'scripts-min'))
-  
+  gulp.watch('./src/html/**/*', gulp.series('markup'));
+
+  gulp.watch('./src/scss/**/*.scss', gulp.series('styles', 'styles-min', 'replace-url'));
+
+  gulp.watch('./src/js/**/*.js', gulp.series('scripts', 'scripts-min'));
+
   gulp.watch('./build/html/**/*').on('change', browserSync.reload);
 });
 

@@ -1,0 +1,216 @@
+.field {
+  display: flex;
+  width: 100%;
+  height: 51px;
+  background: #F2FFDC;
+  border: 2px solid #828282;
+  border-radius: 100px;
+  font-size: 18px;
+  color: #2D2F36;
+
+  &-title {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 133.9%;
+  }
+}
+
+.registration {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42px 0 31px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 0 7px;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 14px;
+
+    .error {
+      color: red;
+      font-weight: 800;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translate(-50%);
+      
+      + .registration__form-input {
+        border: 2px solid red;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-checkbox {
+      margin: 5px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 600px;
+
+    &-input {
+      align-items: center;
+      line-height: 24px;
+      outline: none;
+      padding: 0 18px;
+
+      &::placeholder {
+        color: #2D2F36;
+      }
+    }
+
+    &-switch {
+      margin-bottom: 13px;
+
+      &__wrapper {
+        overflow: hidden;
+        height: 53px;
+        padding: 3px;
+      }
+
+      &__input {
+        position: absolute !important;
+        height: 0px;
+        width: 0px;
+        border: 0;
+        overflow: hidden;
+
+        &:checked + .registration__form-switch__label {
+          background: #BEC7AF;
+        }
+      }
+
+      &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F2FFDC;
+        border-radius: 25px;
+        width: 50%;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 8px 16px;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-checkboxes {
+      &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -5px;
+        margin-bottom: 33px;
+      }
+
+      &__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        
+        &:checked+.registration__form-checkboxes__label {
+          background: #BEC7AF;
+        }
+
+        +.registration__form-checkboxes__label {
+          display: flex;
+          align-items: center;
+          height: 34px;
+          background: #F2FFDC;
+          border: 2px solid #828282;
+          border-radius: 20px;
+          font-size: 16px;
+          line-height: 18px;
+          color: #2D2F36;
+          padding: 8px 20px;
+        }
+      }
+    }
+
+    &-distance {
+      margin-bottom: 73px;
+    }
+
+    &-slider {
+      width: 100%;
+
+      &__distance {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3px;
+
+        span {
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    &-range {
+      position: relative;
+      
+      &__slider {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        width: 100%;
+        height: 9px;
+        background: linear-gradient(90deg, rgb(214,214,214) 60%, rgb(214,214,214) 60%);
+        border-radius: 10px;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+
+        &::-moz-range-progress {
+          background: #828282;
+        }
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+                  appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #E5218F;
+          cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #E5218F;
+          cursor: pointer;
+        }
+      }
+
+      &__pointer {
+        position: absolute;
+        bottom: 25px;
+        left: -1px;
+        width: 72px;
+        height: 20px;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        background: #F2FFDC;
+        color: #2D2F36;
+      }
+    }
+  }
+}
