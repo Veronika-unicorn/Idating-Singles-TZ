@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta name="theme-color" content=""> -->
+    <!-- <meta name="msapplication-navbutton-color" content=""> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content=""> -->
+    <title>title</title>
+    <meta name="description" content="description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="../css/template.css">
+  </head>
+  <body class="welcome">
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <button class="header__button header__button__back" onclick="changePage('profiles')">
+          <img class="header__button__back-img" src="../../img/back-btn.svg" alt="back"/>
+        </button>
+
+        <img class="header__logo" src="../../img/logo.svg" alt="logo"/>
+
+        <button class="header__button header__button__profile">
+          <img class="header__button__profile-img" src="../../img/profile-btn.svg" alt="profile"/>
+        </button>
+      </div>
+    </div>
+  </header>
+    <main>
+    <div class="welcome-page">
+      <div class="container">
+        <div class="welcome-page__wrapper">
+          <img class="welcome-page__photo" src="../../img/photo.png" alt="photo"/>
+          <img class="welcome-page__logo" src="../../img/logo.svg" alt="logo"/>
+          <p class="welcome-page__text">
+            Find a suitable person for chatting,  real meetups and relationship
+          </p>
+          <button class="button button-pink welcome-page__button" onclick="changePage('registration')">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="registration-page">
+      <div class="container">
+        <div class="registration__wrapper">
+          <h1 class="registration__title">
+            Create profile
+          </h1>
+          <form class="registration__form">
+            <div class="registration__form-wrapper">
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="full-name">
+                  Full name
+                </label>
+                <input class="field registration__form-input" id="full-name" type="text" placeholder="Full name" name="full-name">
+              </div>
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="name">
+                  Your name
+                </label>
+                <input class="field registration__form-input" id="name" type="text" placeholder="Name" name="name">
+              </div>
+              <div class="registration__field">
+                <label class="field-title registration__form-label" for="country">
+                  Your country
+                </label>
+                <input class="field registration__form-input" id="country" type="text" placeholder="Country" name="country">
+              </div>
+              <div class="registration__form-switch">
+                <span class="field-title registration__form-switch__title">
+                  Your gender
+                </span>
+                <div class="field registration__form-switch__wrapper">
+                  <input class="registration__form-switch__input" type="radio" id="male" name="switch" value="male" checked/>
+                  <label class="registration__form-switch__label" for="male">
+                    Male
+                  </label>
+                  <input class="registration__form-switch__input" type="radio" id="female" name="switch" value="female" />
+                  <label class="registration__form-switch__label" for="female">
+                    Female
+                  </label>
+                </div>
+              </div>
+
+              <div class="registration__form-checkboxes">
+                <span class="field-title registration__form-checkboxes__title">
+                  Your hobbies
+                </span>
+                <div class="registration__form-checkboxes__wrapper">
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="music" name="music" value="music" checked/>
+                    <label class="registration__form-checkboxes__label" for="music">
+                      Music
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="sports" name="sports" value="sports" />
+                    <label class="registration__form-checkboxes__label" for="sports">
+                      Sports
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="travel" name="travel" value="travel" checked/>
+                    <label class="registration__form-checkboxes__label" for="travel">
+                      Travel
+                    </label>
+                  </div>
+                  <div class="registration__field-checkbox">
+                    <input class="registration__form-checkboxes__input" type="checkbox" id="movies" name="movies" value="movies" />
+                    <label class="registration__form-checkboxes__label" for="movies">
+                      Movies
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="registration__form-distance">
+                <h2 class="registration__title">
+                  Search distance
+                </h2>
+
+                <div class="registration__form-slider">
+                  <div class="registration__form-slider__distance">
+                    <span>0m</span>
+                    <span>1000m</span>
+                  </div>
+                  <div class="registration__form-range">
+                    <div class="registration__form-range__pointer"></div>
+                    <input class="registration__form-range__slider" id="range" type="range" min="0" max="1000" value="0"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <button type="submit" class="button button-pink registration__form-button" >
+              Create profile
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="profiles-page">
+      <div class="container">
+        <div class="all-profiles">
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-page">
+      <div class="container">
+        <div class="profile__card">
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-page">
+      <div class="container">
+        <div class="chat__wrapper">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="chats-page">
+      <div class="container">
+        <div class="chats">
+          <div class="chat__card">
+            <div class="chat__profile-photo">
+              <img src="../../img/profile-photo/girl1.jpg" alt="girl-photo"/>
+            </div>
+            <div class="chat__text">
+              <span class="chat__profile-name">
+                Hanna
+              </span>
+              <span class="chat__msg">
+                Hi! Let’s get fun!
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+  <footer id="footer" class="footer">
+    <div class="container">
+      <ul class="footer__navbar">
+        <li class="footer__navbar-item">
+          <a href="/privacy" class="footer__navbar-item__link">
+            Privacy Policy
+          </a>
+        </li>
+        <li class="footer__navbar-item">
+          <a href="/terms" class="footer__navbar-item__link">
+            Terms & Conditions
+          </a>
+        </li>
+        <li class="footer__navbar-item">
+          <a href="/contact" class="footer__navbar-item__link">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div class="modal" id="modal">
+    <div class="modal__card">
+      <button class="modal__close" onclick="hideModal()">
+        <img class="modal__close-icon" src="../../img/modal-close.svg" alt="modal-close-icon "/>
+      </button>
+      <span class="modal__title">
+        Are you sure you want to block this user?
+      </span>
+      <span class="modal__text">
+        This user will be added to your blocklist
+      </span>
+      <button class="button button-pink modal__block-button">
+        Block
+      </button>
+      <button class="button button-border modal__cancel-button" onclick="hideModal()">
+        Cancel
+      </button>
+    </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
